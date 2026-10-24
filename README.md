@@ -2,35 +2,35 @@ Home Credit Default Risk Analysis
 
 Project Overview
 
-This project analyzes consumer loan application data to understand patterns associated with loan default risk. Using Python, SQL, SQLite, and Power BI, the project explores applicant characteristics and historical credit information to identify trends that can support data-driven lending decisions.
+This project analyzes consumer loan application data to understand patterns associated with loan default risk. Using Python, SQL, SQLite, and Power BI, it explores applicant characteristics and historical credit information to support data-driven lending decisions.
 
 Business Problem
 
-Financial institutions need to assess the risk that borrowers may have difficulty repaying loans. This project examines historical loan application data to identify default patterns across applicant groups and credit history categories.
+Financial institutions need to assess the risk that borrowers may struggle to repay loans. This project investigates historical loan application data to identify default patterns across applicant groups and credit history categories.
 
 Objectives
 
-- Analyze overall loan default rates.
-- Investigate default patterns across income and education groups.
-- Examine employment and income-related risk factors.
-- Analyze historical credit bureau information.
-- Perform statistical analysis to explore relationships between applicant characteristics and defaults.
+- Calculate the overall loan default rate.
+- Analyze default patterns across income and education groups.
+- Investigate employment and income-related risk factors.
+- Explore historical credit bureau information.
+- Apply statistical testing to examine relationships between applicant characteristics and defaults.
 - Build an interactive Power BI dashboard to communicate findings.
 
 Tools and Technologies
 
 - Python: Pandas, NumPy, SciPy
 - SQL: Data querying and aggregation
-- SQLite: Local database storage and analysis
-- Power BI: Interactive data visualization
+- SQLite: Database storage and analysis
+- Power BI: Interactive dashboards and visualization
 - VS Code: Development environment
 - Git and GitHub: Version control and project hosting
 
 Dataset
 
-The project uses the Home Credit Default Risk dataset, including loan application data and supporting credit history tables.
+This project uses the "Home Credit Default Risk dataset on Kaggle" (https://www.kaggle.com/competitions/home-credit-default-risk/data).
 
-Key datasets include:
+Datasets used include:
 
 - "application_train.csv"
 - "application_test.csv"
@@ -41,7 +41,7 @@ Key datasets include:
 - "credit_card_balance.csv"
 - "installments_payments.csv"
 
-Note: The original datasets and local SQLite database are excluded from GitHub because of their size. Obtain the dataset from the official "Home Credit Default Risk competition on Kaggle" (https://www.kaggle.com/competitions/home-credit-default-risk/data).
+Data availability: Raw datasets and the local SQLite database are excluded from this repository because of their size. Download the required files from Kaggle before running the analysis scripts.
 
 Analysis Performed
 
@@ -49,27 +49,39 @@ Analysis Performed
 - Default rate analysis by income group.
 - Education-level risk analysis.
 - Employment and income-type comparisons.
-- Chi-square statistical test for income type and default status.
+- Chi-square statistical testing.
 - Credit bureau history analysis.
-- Applicant-level bureau data aggregation to avoid duplicate applicant counts.
-- Export of analysis results to CSV for reporting and visualization.
+- Applicant-level aggregation of bureau records to avoid duplicate applicant counts.
+- Export of analytical results to CSV for reporting and visualization.
 
-Key Finding
+Key Findings
 
-The training dataset contains 307,511 loan applications, including 24,825 applications with a recorded default target of 1.
+The training dataset contains:
 
-The overall default rate is approximately 8.07%.
+- Total applications: 307,511
+- Applications with TARGET = 1: 24,825
+- Overall default rate: Approximately 8.07%
 
-This is a descriptive finding for the training dataset, not a prediction of future default rates. Further analysis is required to determine which characteristics are most strongly associated with default risk.
+These figures describe the training dataset. They should not be interpreted as a prediction of future loan defaults.
 
 Power BI Dashboard
 
-The Power BI dashboard contains two report pages:
+The Power BI report contains two pages:
 
-1. Default Rate by Credit History — compares default rates across credit history groups.
-2. Applicants by Credit History Group — displays the distribution of applicants across those groups.
+1. Default Risk Analysis: Compares default rates across credit history groups.
+2. Credit History Overview: Displays applicant counts across credit history groups.
 
-Dashboard file: "powerbi/Home_Credit_Risk_Dashboard.pbix"
+Dashboard Preview
+
+1. Default Risk Analysis
+
+"Default Rate by Credit History" (screenshots/dashboard_default_risk.png)
+
+2. Credit History Overview
+
+"Applicants by Credit History Group" (screenshots/dashboard_credit_history.png)
+
+Power BI file: "powerbi/Home_Credit_Risk_Dashboard.pbix"
 
 Project Structure
 
@@ -93,6 +105,9 @@ home-credit-default-risk/
 │   ├── combined_risk_report.csv
 │   ├── education_risk_summary.csv
 │   └── project_report.md
+├── screenshots/
+│   ├── dashboard_default_risk.png
+│   └── dashboard_credit_history.png
 ├── sql/
 │   └── 01_default_analysis.sql
 ├── .gitignore
@@ -100,28 +115,35 @@ home-credit-default-risk/
 
 How to Run
 
-Clone this repository.
+1. Clone this repository:
+   
+   git clone https://github.com/poleneha/Home-Credit-Default-Risk-Analysis.git
 
-Download the dataset files from Kaggle and place the required CSV files in the project root directory.
+2. Open the project folder:
+   
+   cd Home-Credit-Default-Risk-Analysis
 
-Install the required Python packages:
+3. Download the required datasets from Kaggle and place the CSV files in the project root directory.
 
-pip install pandas numpy scipy
+4. Install the Python packages:
+   
+   pip install pandas numpy scipy
 
-Run the relevant Python scripts from the project root, for example:
+5. Run the required analysis script from the project root, for example:
+   
+   python python/default_rate.py
 
-python python/default_rate.py
+6. Open "powerbi/Home_Credit_Risk_Dashboard.pbix" in Power BI Desktop to explore the report.
 
-Open powerbi/Home_Credit_Risk_Dashboard.pbix in Power BI Desktop to explore the dashboard.
-
-Note: Some scripts may require additional packages or the locally generated SQLite database. Run python/load_data.py first if your workflow requires database creation, and check individual scripts for their specific requirements.
+Note: Individual scripts may require additional packages or a locally generated SQLite database. Check each script's requirements and run the data-loading script first when necessary.
 
 Conclusion
 
-This project demonstrates an end-to-end data analysis workflow involving data preparation, SQL querying, statistical analysis, risk segmentation, and dashboard development. It showcases practical skills in Python, SQL, SQLite, and Power BI for exploring consumer credit risk.
+This project demonstrates a practical data analytics workflow involving data preparation, SQL querying, statistical analysis, risk segmentation, and dashboard development. It showcases hands-on skills in Python, SQL, SQLite, and Power BI for exploring consumer credit risk.
 
 Author
 
 Neha Pole
 
-GitHub: poleneha
+- GitHub: "poleneha" (https://github.com/poleneha)
+- Project Repository: "Home Credit Default Risk Analysis" (https://github.com/poleneha/Home-Credit-Default-Risk-Analysis)
