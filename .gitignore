@@ -1,0 +1,23 @@
+﻿# Raw datasets
+application_train.csv
+application_test.csv
+bureau.csv
+bureau_balance.csv
+credit_card_balance.csv
+installments_payments.csv
+POS_CASH_balance.csv
+previous_application.csv
+sample_submission.csv
+HomeCredit_columns_description.csv
+
+# Local database
+home_credit.db
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local editor settings
+.vscode/
